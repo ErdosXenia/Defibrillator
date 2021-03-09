@@ -1,6 +1,6 @@
 ﻿namespace Defibrillator
 {
-    partial class Form1
+    partial class frmKeszulek
     {
         /// <summary>
         /// Required designer variable.
@@ -41,7 +41,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(58, 62);
+            this.label1.Location = new System.Drawing.Point(91, 30);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(149, 29);
@@ -51,7 +51,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(58, 124);
+            this.label2.Location = new System.Drawing.Point(91, 96);
             this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(149, 29);
@@ -60,21 +60,21 @@
             // 
             // tbX
             // 
-            this.tbX.Location = new System.Drawing.Point(215, 62);
+            this.tbX.Location = new System.Drawing.Point(248, 30);
             this.tbX.Name = "tbX";
             this.tbX.Size = new System.Drawing.Size(182, 34);
             this.tbX.TabIndex = 2;
             // 
             // tbY
             // 
-            this.tbY.Location = new System.Drawing.Point(215, 124);
+            this.tbY.Location = new System.Drawing.Point(248, 96);
             this.tbY.Name = "tbY";
             this.tbY.Size = new System.Drawing.Size(182, 34);
             this.tbY.TabIndex = 3;
             // 
             // btnAdatok
             // 
-            this.btnAdatok.Location = new System.Drawing.Point(170, 186);
+            this.btnAdatok.Location = new System.Drawing.Point(170, 164);
             this.btnAdatok.Name = "btnAdatok";
             this.btnAdatok.Size = new System.Drawing.Size(209, 43);
             this.btnAdatok.TabIndex = 4;
@@ -84,7 +84,7 @@
             // 
             // btnUjAdat
             // 
-            this.btnUjAdat.Location = new System.Drawing.Point(41, 684);
+            this.btnUjAdat.Location = new System.Drawing.Point(39, 668);
             this.btnUjAdat.Name = "btnUjAdat";
             this.btnUjAdat.Size = new System.Drawing.Size(242, 48);
             this.btnUjAdat.TabIndex = 5;
@@ -93,27 +93,28 @@
             // 
             // btnKilepes
             // 
-            this.btnKilepes.Location = new System.Drawing.Point(392, 684);
+            this.btnKilepes.Location = new System.Drawing.Point(396, 668);
             this.btnKilepes.Name = "btnKilepes";
             this.btnKilepes.Size = new System.Drawing.Size(121, 48);
             this.btnKilepes.TabIndex = 6;
             this.btnKilepes.Text = "Kilépés";
             this.btnKilepes.UseVisualStyleBackColor = true;
+            this.btnKilepes.Click += new System.EventHandler(this.btnKilepes_Click);
             // 
             // lbKiiras
             // 
             this.lbKiiras.FormattingEnabled = true;
             this.lbKiiras.ItemHeight = 29;
-            this.lbKiiras.Location = new System.Drawing.Point(31, 251);
+            this.lbKiiras.Location = new System.Drawing.Point(30, 229);
             this.lbKiiras.Name = "lbKiiras";
             this.lbKiiras.Size = new System.Drawing.Size(518, 410);
             this.lbKiiras.TabIndex = 7;
             // 
-            // Form1
+            // frmKeszulek
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(582, 753);
+            this.ClientSize = new System.Drawing.Size(582, 735);
             this.Controls.Add(this.lbKiiras);
             this.Controls.Add(this.btnKilepes);
             this.Controls.Add(this.btnUjAdat);
@@ -125,9 +126,9 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.Name = "Form1";
+            this.Name = "frmKeszulek";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Defibllirátor";
             this.ResumeLayout(false);
             this.PerformLayout();
 

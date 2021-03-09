@@ -11,11 +11,11 @@ using System.Windows.Forms;
 
 namespace Defibrillator
 {
-    public partial class Form1 : Form
+    public partial class frmKeszulek : Form
     {
         List<Keszulek> keszulekek = new List<Keszulek>();
 
-        public Form1()
+        public frmKeszulek()
         {
             InitializeComponent();
         }
@@ -30,7 +30,7 @@ namespace Defibrillator
                 while (!sr.EndOfStream)
                 {
                     string[] a = sr.ReadLine().Split(';');
-                    keszulekek.Add(new Keszulek(int.Parse(a[0]), a[1], double.Parse(a[2]), double.Parse(a[3]), a[4], a[5]));
+                    keszulekek.Add(new Keszulek(Convert.ToInt32(a[0]), a[1], Convert.ToDouble(a[2]), Convert.ToDouble(a[3]), a[4], a[5]));
                 }
                 sr.Close();
             }
@@ -40,6 +40,11 @@ namespace Defibrillator
             }
 
             
+        }
+
+        private void btnKilepes_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
