@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,9 +13,33 @@ namespace Defibrillator
 {
     public partial class Form1 : Form
     {
+        List<Keszulek> keszulekek = new List<Keszulek>();
+
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void btnAdatok_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+                StreamReader sr = new StreamReader("data.csv");
+                sr.ReadLine();
+                while (!sr.EndOfStream)
+                {
+                    string[] a = sr.ReadLine().Split(';');
+                    keszulekek.Add(new Keszulek(int.Parse(a[0]), a[1], double.Parse(a[2]), double.Parse(a[3]), a[4], a[5]));
+                }
+                sr.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            
         }
     }
 }

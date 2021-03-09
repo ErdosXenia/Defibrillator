@@ -80,6 +80,7 @@
             this.btnAdatok.TabIndex = 4;
             this.btnAdatok.Text = "Adatok lekérése";
             this.btnAdatok.UseVisualStyleBackColor = true;
+            this.btnAdatok.Click += new System.EventHandler(this.btnAdatok_Click);
             // 
             // btnUjAdat
             // 
